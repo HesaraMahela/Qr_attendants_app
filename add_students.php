@@ -289,7 +289,7 @@
                                                               <a class="btn btn-sm bg-danger-light" href="st_edit.php?st_username=<?php echo $row['st_username']; ?>">
 																 edit
 															</a>
-                                                                <a class="btn btn-sm bg-dark-light" href="st_delete.php?st_username=<?php echo $row['st_username'];#delete_modal ?>">
+                                                                <a class="btn btn-sm bg-success-light" href="st_delete.php?st_username=<?php echo $row['st_username'];?>">
 																 delete
 															</a>
                                                             </span>

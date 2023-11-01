@@ -1,6 +1,7 @@
 <?php
     require 'validator.php';
     require_once 'conn.php';
+    require_once 'editStudentDBcon.php'
 ?>
 
 
@@ -107,8 +108,8 @@
 			<!-- /Sidebar -->
 
 			<!-- Page Wrapper -->
-            <div class="page-wrapper">
-                <div class="content container-fluid">
+
+
 
 					<!-- Page Header -->
 						 <?php
@@ -116,24 +117,14 @@
                     			$query1 = mysqli_query($conn, "SELECT * FROM student INNER JOIN degree on student.degID = degree.degID WHERE `st_username` = '$st_username'") or die(mysqli_error());
                     			$fetch1 = mysqli_fetch_array($query1);
                     	?>
+            <?php
 
-
-<h5 class="page-title" style="margin-top:10px; margin-left:25%; margin-bottom:50px; width:50%;">
-	<div class="row form-row">
-
-		<div class="col-12">
-				<h4 class="table-avatar" style="margin-top:50px; width:50%; margin-bottom:50px;">
-					<?php
-						$img = $fetch1['imgPath']; ?>
-
-			</h4>
-
-	</div>
-
-</h5>
-
-</div>
-					</div>
+            $defult_batch = $fetch1['batchNo'];
+            $defult_degree = $fetch1['degName'];
+            $db_handle = new DBController();
+            $countryResult = $db_handle->runQuery("SELECT * FROM batch WHERE batchNo != '$defult_batch' ORDER BY batchNo ASC");
+            $countryResult2 = $db_handle->runQuery("SELECT * FROM degree WHERE degName != '$defult_degree' ORDER BY degName ASC");
+            ?>
 			
 			<!-- Edit Details Modal-->
             <div class="container">
@@ -155,43 +146,7 @@
 										</div>
 									</div>
 
-									<?php
-									class DBController 
-									{
-  										private $host = "localhost";
-  										private $user = "root";
-  										private $password = "";
-  										private $database = "adms_db";
-  										private $conn;
-  
-        								function __construct() 
-										{
-        									$this->conn = $this->connectDB();
-  										}
 
-  										function connectDB() 
-										{
-    										$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
-    										return $conn;
-  										}
-
-        								function runQuery($query) 
-										{
-                							$result = mysqli_query($this->conn,$query);
-                							while($row=mysqli_fetch_assoc($result)) 
-											{
-                								$resultset[] = $row;
-                							}   
-                							if(!empty($resultset))
-                							return $resultset;
-  										}
-									}
-									$defult_batch = $fetch1['batchNo'];
-									$defult_degree = $fetch1['degName'];
-									$db_handle = new DBController();
-									$countryResult = $db_handle->runQuery("SELECT * FROM batch WHERE batchNo != '$defult_batch' ORDER BY batchNo ASC");
-									$countryResult2 = $db_handle->runQuery("SELECT * FROM degree WHERE degName != '$defult_degree' ORDER BY degName ASC");
-								?>
 
 									<div class="col-12 col-sm-6">
 										<div class="form-group">
