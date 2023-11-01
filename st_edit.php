@@ -132,7 +132,7 @@
 			<div class="col-md-6 " id="edit_details"  >
 
 						<div class="row">
-							<h5 class="title">Edit Student Details</h5>
+							<h5 class="title ml-5">Edit Student Details</h5>
 						</div>
 						<div class="card-body">
 							<form method="POST" action="new_student.php" enctype="multipart/form-data">
