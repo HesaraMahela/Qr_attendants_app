@@ -89,15 +89,12 @@
 						</a>
 						<div class="dropdown-menu">
 							<div class="user-header">
-								<div class="avatar avatar-sm">
-									<img src="<?php echo $fetch['img']; ?>" alt="User Image" class="avatar-img rounded-circle">
-								</div>
 								<div class="user-text">
 									<h6><?php echo $fetch['firstname']; ?> <?php echo $fetch['lastname']; ?></h6>
 									<p class="text-muted mb-0"><?php echo $fetch['status']; ?></p>
 								</div>
 							</div>
-							<a class="dropdown-item" href="profile.php">My Profile</a>
+
 							<a class="dropdown-item" href="logout.php">Logout</a>
 						</div>
 					</li>
