@@ -111,16 +111,12 @@
                 <div class="content container-fluid">
 
 					<!-- Page Header -->
-					<div class="page-header">
 						 <?php
                     			$st_username = $_REQUEST["st_username"];
                     			$query1 = mysqli_query($conn, "SELECT * FROM student INNER JOIN degree on student.degID = degree.degID WHERE `st_username` = '$st_username'") or die(mysqli_error());
                     			$fetch1 = mysqli_fetch_array($query1);
                     	?>
 
-								<a href="#edit_details" data-toggle="modal" class="btn btn-success float-center"><i class="fe fe-pencil"></i> Edit</a> 
-								<a href="#delete_modal" data-toggle="modal" class="btn btn-danger float-center"><i class="fe fe-trash"></i> Delete</a>
-								<div class="row">
 
 <h5 class="page-title" style="margin-top:10px; margin-left:25%; margin-bottom:50px; width:50%;">
 	<div class="row form-row">
@@ -128,42 +124,9 @@
 		<div class="col-12">
 				<h4 class="table-avatar" style="margin-top:50px; width:50%; margin-bottom:50px;">
 					<?php
-						$img = $fetch1['imgPath']; 
+						$img = $fetch1['imgPath']; ?>
 
-						if($img == "C:")
-						{?>
-							<center><a href="#" class="avatar avatar-sm mr-2">
-								<img style="height:130px; width:150px; border-radius:50%; margin-left:160px;" class="avatar-img" src="assets/img/student/user.png">
-							</a></center>
-				<?php	}
-						else
-						{?>
-
-							<center><a href="<?php echo $img; ?>" class="avatar avatar-sm mr-2">
-								<img style="height:130px; width:150px; border-radius:50%; margin-left:160px;" class="avatar-img" src="<?php echo $img; ?>">
-							</a></center>
-
-			<?php		}
-
-						?>
 			</h4>
-				<center><h4 class="page-title" style="margin-top:150px; width:100%; margin-bottom:25px;"><?php echo $fetch1['st_name']; ?></h4></center>
-				<center><h4 class="page-title" style="width:100%; margin-bottom:50px;"><?php echo $fetch1['degName']; ?> | <?php echo $fetch1['batchNo']; ?></h4></center>
-		</div>
-
-		<div class="col-12 col-sm-6">
-			<div class="form-group">
-				<label>Student ID</label>
-				<input type="text" class="form-control" required="" readonly="true" value="<?php echo $fetch1['st_no']; ?>">
-			</div>
-		</div>
-
-		<div class="col-12 col-sm-6">
-			<div class="form-group">
-				<label>Student Username</label>
-				<input type="text" class="form-control" required="" readonly="true" value="<?php echo $fetch1['st_username']; ?>">
-			</div>
-		</div>
 
 	</div>
 
@@ -173,16 +136,14 @@
 					</div>
 			
 			<!-- Edit Details Modal-->
-			<div class="modal fade" id="edit_details" aria-hidden="true" role="dialog" >
-				<div class="modal-dialog modal-dialog-centered" role="document" >
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Edit Student Details</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
+            <div class="container">
+                <div class="row d-flex justify-content-center text-center ">
+			<div class="col-md-6 " id="edit_details"  >
+
+						<div class="row">
+							<h5 class="title">Edit Student Details</h5>
 						</div>
-						<div class="modal-body">
+						<div class="card-body">
 							<form method="POST" action="new_student.php" enctype="multipart/form-data">
 								<div class="row form-row">
 
@@ -284,32 +245,7 @@
 			</div>
 			<!--/Edit Details Modal -->
 
-			<!-- Delete Modal -->
-			<div class="modal fade" id="delete_modal" aria-hidden="true" role="dialog">
-				<div class="modal-dialog modal-dialog-centered" role="document" >
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Delete</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<div class="form-content p-2">
-								<h4 class="modal-title">Delete Student</h4>
-								<p class="mb-4">Are you sure want to delete ?</p>
 
-								<form method="POST" action="new_student.php" enctype="multipart/form-data">
-									<input style="display: none;" type="text" name="st_username" value="<?php echo $fetch1['st_username']; ?>">
-									<button type="submit" name="delete" class="btn btn-primary">Save </button>
-									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/Delete Modal -->
 
 		<!-- /Main Wrapper -->
 		
