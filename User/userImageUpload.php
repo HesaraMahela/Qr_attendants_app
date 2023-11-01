@@ -25,8 +25,8 @@ header("Content-Type: application/json; charset=UTF-8");
                 if(mysqli_query($conn, $sql)){
 					$myObj=new \stdClass();
                     $myObj->success = 'true';
-                  
-                    $myJSON = json_encode($myObj);
+
+                    $myJSON = json_encode($myObj);//{'success':true}
                     echo $myJSON;
                     
                 }

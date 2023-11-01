@@ -177,7 +177,7 @@
 													<td>
 														<h2 class="table-avatar">
 															<?php
-																$img = $row['imgPath']; 
+																$img = $row['imgPath'];
 
 																if($img == "C:")
 																{?>
@@ -285,9 +285,15 @@
 												
 													<td class="text-right">
 														<div class="actions">
-															<a class="btn btn-sm bg-success-light" href="st_edit.php?st_username=<?php echo $row['st_username']; ?>">
-																<i class="fe fe-eye"></i> View
+                                                            <span>
+                                                              <a class="btn btn-sm bg-danger-light" href="st_edit.php?st_username=<?php echo $row['st_username'];#edit_details ?>">
+																 edit
 															</a>
+                                                                <a class="btn btn-sm bg-dark-light" href="st_edit.php?st_username=<?php echo $row['st_username'];#delete_modal ?>">
+																 delete
+															</a>
+                                                            </span>
+
 														</div>
 													</td>
 												</tr>

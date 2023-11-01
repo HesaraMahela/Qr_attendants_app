@@ -18,6 +18,7 @@ VALUES ('$userName', '$lec_id', '$lat', '$lng', current_timestamp(), '$ispresent
 
 
 
+
 if(mysqli_query($conn, $sql)){
     $myObj=new \stdClass();
     $myObj->success = 'true';
