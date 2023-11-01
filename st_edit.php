@@ -1,4 +1,4 @@
-<?php 
+<?php
     require 'validator.php';
     require_once 'conn.php';
 ?>
@@ -6,44 +6,44 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <!-- Mirrored from dreamguys.co.in/demo/doccure/admin/specialities.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:49 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <title>Attendance Mananagement System - Students</title>
-		
+
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-		
+
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
+
 		<!-- Fontawesome CSS -->
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		
+
 		<!-- Feathericon CSS -->
         <link rel="stylesheet" href="assets/css/feathericon.min.css">
-		
+
 		<!-- Datatables CSS -->
 		<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
-		
+
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-		
+
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
     </head>
     <body>
-	
+
 		<!-- Main Wrapper -->
         <div class="main-wrapper">
-		
+
 			<!-- Header -->
             <div class="header">
-			
+
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="home.php" class="logo">
@@ -54,23 +54,23 @@
 					</a>
                 </div>
 				<!-- /Logo -->
-				
+
 				<a href="javascript:void(0);" id="toggle_btn">
 					<i class="fe fe-text-align-left"></i>
 				</a>
-				
+
 				<!-- Mobile Menu Toggle -->
 				<a class="mobile_btn" id="mobile_btn">
 					<i class="fa fa-bars"></i>
 				</a>
 				<!-- /Mobile Menu Toggle -->
-				
+
 				<!-- Header Right Menu -->
 				<ul class="nav user-menu">
-					
+
 					<!-- User Menu -->
 
-					<?php 
+					<?php
                 		$query = mysqli_query($conn, "SELECT * FROM `user` WHERE `user_id` = '$_SESSION[user]'") or die(mysqli_error());
                 		$fetch = mysqli_fetch_array($query);
             		?>
@@ -93,34 +93,33 @@
 						</div>
 					</li>
 					<!-- /User Menu -->
-					
+
 				</ul>
 				<!-- /Header Right Menu -->
-				
+
             </div>
 			<!-- /Header -->
-			
+
 			<!-- Sidebar -->
-				<?php 
+				<?php
     				require 'sidebar.php';
 				?>
 			<!-- /Sidebar -->
-			
+
 			<!-- Page Wrapper -->
             <div class="page-wrapper">
                 <div class="content container-fluid">
-				
+
 					<!-- Page Header -->
 					<div class="page-header">
 						 <?php
-                    			$st_username = $_REQUEST["st_username"]; 
+                    			$st_username = $_REQUEST["st_username"];
                     			$query1 = mysqli_query($conn, "SELECT * FROM student INNER JOIN degree on student.degID = degree.degID WHERE `st_username` = '$st_username'") or die(mysqli_error());
                     			$fetch1 = mysqli_fetch_array($query1);
                     	?>
 
 								<a href="#edit_details" data-toggle="modal" class="btn btn-success float-center"><i class="fe fe-pencil"></i> Edit</a> 
 								<a href="#delete_modal" data-toggle="modal" class="btn btn-danger float-center"><i class="fe fe-trash"></i> Delete</a>
-
 								<div class="row">
 
 <h5 class="page-title" style="margin-top:10px; margin-left:25%; margin-bottom:50px; width:50%;">
