@@ -1,0 +1,2 @@
+Dark Green: #117A65
+Light Green hover: #1ABC9C
