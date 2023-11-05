@@ -232,26 +232,7 @@
 							</div>
 							<!-- /Profile Sidebar -->
 
-							<!-- Search Filter -->
-							<div class="card search-filter">
-								<div class="card-header">
-									<h4 class="card-title mb-0">Search Filter</h4>
-								</div>
-								<div class="card-body">
-							<form method="POST" action="upcoming.php">
-								<div class="filter-widget">
-									<h4>Search by Date</h4>
-									<div>
-										<input type="datetime-local" class="form-control datetimepicker" name="parm1" placeholder="Select Date">
-									</div>			
-								</div>
-									<div class="btn-search">
-										<button class="btn btn-block" type="submit" name="search">Search</button>
-									</div>	
-								</div>
-							</form>
-							</div>
-							<!-- /Search Filter -->
+
 							
 						</div>
 						

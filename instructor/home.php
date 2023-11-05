@@ -230,26 +230,7 @@
 							</div>
 							<!-- /Profile Sidebar -->
 
-							<!-- Search Filter -->
-							<div class="card search-filter">
-								<div class="card-header">
-									<h4 class="card-title mb-0">Search Filter</h4>
-								</div>
-								<div class="card-body">
-							<form method="POST" action="home.php">
-								<div class="filter-widget">
-									<h4>Search by Date</h4>
-									<div>
-										<input type="datetime-local" class="form-control datetimepicker" name="parm1" placeholder="Select Date">
-									</div>			
-								</div>
-									<div class="btn-search">
-										<button class="btn btn-block" type="submit" name="search">Search</button>
-									</div>	
-								</div>
-							</form>
-							</div>
-							<!-- /Search Filter -->
+
 							
 						</div>
 						
@@ -356,72 +337,11 @@
 
 																	$m_code = $fetch['m_code'];
 																	$ins_id = $fetch['ins_id'];
-																	//$s_time = date("Y-m-d",strtotime($row['e_time'])); 
+																	//$s_time = date("Y-m-d",strtotime($row['e_time']));
 																	//$currentdate = date('Y-m-d');
 
-																	if(ISSET($_POST['search']))
-																	{
-																		$prm1 = $_POST['parm1'];
-																		if($prm1 == null)
-																		{
-																			$z = $conn->query("SELECT * FROM lecture INNER JOIN module on lecture.m_code = module.m_code WHERE lecture.m_code = '$m_code' AND ins_id = '$ins_id' ORDER BY lec_id ASC") or die ($conn->error());
-																		}
-																		else
-																		{
-																			$z = $conn->query("SELECT * FROM lecture INNER JOIN module on lecture.m_code = module.m_code WHERE lecture.m_code = '$m_code' AND ins_id = '$ins_id' AND lecture.s_time = '$prm1' ORDER BY lec_id ASC") or die ($conn->error());
-																		}
 
-																	while($row = $z->fetch_array()){
-
-																?>
-
-																	<tr>
-																		<td><?php echo $row['lec_id']; ?></td>
-																		<td><?php echo $row['s_time']; ?></td>
-																		<td><?php echo $row['e_time']; ?></td>
-																		<td>
-																			<?php 
-																				$s_date_time = $row['e_time']; 
-																				$currentdate_time = date('Y-m-d H:i:s');
-
-																				$s_date = date("Y-m-d",strtotime($row['e_time'])); 
-																				$currentdate = date('Y-m-d');
-
-																				if($s_date == $currentdate)
-																				{
-																					if($s_date_time > $currentdate_time)
-																					{?>
-																						<span class="badge badge-pill bg-success-light">Today</span>
-																			<?php	}
-																					else
-																					{?>
-																						<span class="badge badge-pill bg-danger-light">Completed</span>
-																			<?php	}
-																				}
-																				if($s_date > $currentdate)
-																				{?>
-																					<span class="badge badge-pill bg-info-light">Upcoming</span>
-																	   <?php	}
-																			if($s_date < $currentdate)
-																				{?>
-																					<span class="badge badge-pill bg-danger-light">Completed</span>
-																	   <?php	}
-																			?>
-																		</td>
-																		<td>
-																			<div class="table-action">
-																				<a href="view.php?lec_id=<?php echo $row['lec_id']; ?>" class="btn btn-sm bg-info-light">
-																					<i class="far fa-eye"></i> View
-																				</a>
-																			</div>
-																		</td>
-																	</tr>
-																	<?php
-
-																	}
-																}
-																else
-																{
+                                                                
 
 																	$z = $conn->query("SELECT * FROM lecture INNER JOIN module on lecture.m_code = module.m_code WHERE lecture.m_code = '$m_code' AND ins_id = '$ins_id' ORDER BY lec_id ASC") or die ($conn->error());
 
@@ -473,7 +393,7 @@
 																	<?php
 
 																	}
-																}
+
 
 																	?>
 																</tbody>
