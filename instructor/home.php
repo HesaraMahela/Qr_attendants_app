@@ -110,8 +110,6 @@
 										<p class="text-muted mb-0"><?php echo $fetch['ins_id']; ?></p>
 									</div>
 								</div>
-								<a class="dropdown-item" href="home.php">Dashboard</a>
-								<a class="dropdown-item" href="profile-settings.php">Profile Settings</a>
 								<a class="dropdown-item" href="logout.php">Logout</a>
 							</div>
 						</li>

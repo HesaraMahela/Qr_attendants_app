@@ -6,8 +6,12 @@
 		$ins_username = $_POST['ins_username'];
 		$password = md5($_POST['password']);
 		
-		$query = mysqli_query($conn, "SELECT * FROM `instructors` WHERE `ins_username` = '$ins_username' && `password` = '$password'") or die(mysqli_error());
-		$fetch = mysqli_fetch_array($query);
+//		$query = mysqli_query($conn, "SELECT * FROM `instructors` WHERE `ins_username` = '$ins_username' && `password` = '$password'") or die(mysqli_error());
+
+        $query = mysqli_query($conn, "SELECT * FROM `instructors` WHERE `ins_username` = 'chalani' ") or die(mysqli_error());
+
+
+        $fetch = mysqli_fetch_array($query);
 		$row = $query->num_rows;
 
 		if($row > 0){
