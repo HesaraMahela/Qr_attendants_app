@@ -92,14 +92,16 @@ function myMap() {
         });
 
     var marker = new google.maps.Marker({
-   position:{lat: 6.820892326363457 , lng: 80.03978118186359}, // Brooklyn Coordinates
+   position:{lat:6.902153370235145 , lng: 79.86048061053953}, // uoc coordinates
    map:map, //Map that we need to add
-   title:'NSBM Green University Town',
-   icon:'college-pin-icon.png',
+   title:'University of colombo Faculty of science',
+   icon:'college-pin-icon.png',//todo:add a img
    animation: google.maps.Animation.DROP,
    // adding custom icons (Here I used a Flash logo marker)
    draggarble: false// If set to true you can drag the marker
 });
+
+    //6.902153370235145, 79.86048061053953
     
 }
 
