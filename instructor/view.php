@@ -184,7 +184,7 @@
 									<!-- Tab Menu -->
 									<nav class="user-tabs mb-4">
 										<ul class="nav nav-tabs nav-tabs-bottom nav-justified">
-                                            <h4 style="margin-top:25px; margin-bottom:25px;">Lecture ID: <?php echo $lec_id; ?></h4>
+                                            <h4 style="margin-top:25px; margin-bottom:25px;">Instructor ID: <?php echo $lec_id; ?></h4>
 										</ul>
 									</nav>
 									<!-- /Tab Menu -->

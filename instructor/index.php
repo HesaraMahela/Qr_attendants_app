@@ -43,7 +43,7 @@
 							<div class="account-content">
 								<div class="row align-items-center justify-content-center">
 									<div class="col-md-7 col-lg-6 login-left">
-										<img src="assets/img/login-banner.png" class="img-fluid" alt="Doccure Login">	
+										<img src="assets/img/login-banner.png" class="img-fluid" alt="img Login">
 									</div>
 									<div class="col-md-12 col-lg-6 login-right">
 										<div class="login-header">
@@ -95,5 +95,5 @@
 		
 	</body>
 
-<!-- doccure/login.html  30 Nov 2019 04:12:20 GMT -->
+
 </html>

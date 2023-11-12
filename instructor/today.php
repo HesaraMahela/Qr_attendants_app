@@ -292,7 +292,7 @@
 																<table class="table table-hover table-center mb-0">
 																	<thead>
 																		<tr>
-																			<th>Lecture ID</th>
+																			<th>Instructor ID</th>
 																			<th>Start Time</th>
 																			<th>End Time</th>
 																			<th>Status</th>

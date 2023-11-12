@@ -237,7 +237,7 @@
 									<div class="row form-row">
 										<div class="col-md-6">
 											<div class="form-group">
-												<label>Lecture ID</label>
+												<label>Instructor ID</label>
 												<input style="display: none;" type="text" class="form-control" name="ins_id" readonly="" value="<?php echo $fetch['ins_id']; ?>">
 												<input type="text" class="form-control" name="lec_id" required="">
 											</div>

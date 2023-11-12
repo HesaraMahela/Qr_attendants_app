@@ -435,5 +435,5 @@
 		
 	</body>
 
-<!-- doccure/doctor-dashboard.html  30 Nov 2019 04:12:09 GMT -->
+
 </html>
