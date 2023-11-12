@@ -194,25 +194,6 @@
 													<span>All Lectures</span>
 												</a>
 											</li>
-
-											<li>
-												<a href="upcoming.php">
-													<i class="fas fa-calendar"></i>
-													<span>Upcoming Lectures</span>
-												</a>
-											</li>
-											<li>
-												<a href="finished.php">
-													<i class="fa fa-window-maximize"></i>
-													<span>Completed Lectures</span>
-												</a>
-											</li>
-											<li>
-												<a href="change-password.php">
-													<i class="fas fa-lock"></i>
-													<span>Change Password</span>
-												</a>
-											</li>
 											<li>
 												<a href="schedule.php">
 													<i class="fas fa-plus"></i>

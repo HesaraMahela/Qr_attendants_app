@@ -73,7 +73,7 @@ if (isset($_POST['change']))
         {
             echo '<script type = "text/javascript">
             alert("Update Failed, Passwords are does not match");
-            window.location = "change-password.php";
+            window.location = "home.php";
             </script>';;
         }
 
@@ -82,7 +82,7 @@ if (isset($_POST['change']))
                 
             echo '<script type = "text/javascript">
             alert("Update Successfully!");
-            window.location = "logout.php";
+            window.location = "home.php";
             </script>';;
             
         }
@@ -90,7 +90,7 @@ if (isset($_POST['change']))
         {
             echo '<script type = "text/javascript">
             alert("Update Failed");
-            window.location = "change-password.php";
+            window.location = "home.php";
             </script>';;
         }
 }
