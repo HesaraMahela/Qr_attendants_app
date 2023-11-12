@@ -196,12 +196,6 @@
 													<span>All Lectures</span>
 												</a>
 											</li>
-											<li>
-												<a href="today.php">
-													<i class="fas fa-calendar-check"></i>
-													<span>Todays Lectures</span>
-												</a>
-											</li>
 											<li class="active">
 												<a href="upcoming.php">
 													<i class="fas fa-calendar"></i>
