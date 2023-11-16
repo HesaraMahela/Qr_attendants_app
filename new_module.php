@@ -16,7 +16,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
         {
             echo '<script type = "text/javascript">
                             alert("Decription is Too Long!");
-                        window.location = "add_modules.php";
+                        window.location = history.back();
                      </script>
                     ';;
 
@@ -30,7 +30,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
                 
                 echo '<script type = "text/javascript">
                             alert("Data Inserted Successfully!");
-                        window.location = "add_modules.php";
+                        window.location = history.back();
                      </script>
                     ';;
 
@@ -41,7 +41,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
                 
 				echo '<script type = "text/javascript">
                             alert("Data Inserted Failed! Please Try Again");
-                        window.location = "add_modules.php";
+                        window.location = history.back();
                      </script>
                     ';;
 
@@ -65,7 +65,7 @@ if (isset($_POST['edit'])) { // if save button on the form is clicked
         {
             echo '<script type = "text/javascript">
                             alert("Decription is Too Long!");
-                        window.location = "add_modules.php";
+                        window.location = history.back();
                      </script>
                     ';;
         }
@@ -77,7 +77,7 @@ if (isset($_POST['edit'])) { // if save button on the form is clicked
                 
                 echo '<script type = "text/javascript">
                             alert("Update Successfully!");
-                        window.location = "add_modules.php";
+                        window.location = history.back();
                      </script>
                     ';;
             }
@@ -85,7 +85,7 @@ if (isset($_POST['edit'])) { // if save button on the form is clicked
             {
                 echo '<script type = "text/javascript">
                             alert("Update Failed");
-                        window.location = "add_modules.php";
+                        window.location = history.back();
                      </script>
                     ';;
 
@@ -105,7 +105,7 @@ if (isset($_POST['delete']))
                 
                 echo '<script type = "text/javascript">
                             alert("Delete Successfully!");
-                        window.location = "add_modules.php";
+                        window.location = history.back();
                      </script>
                     ';;
             }
@@ -113,7 +113,7 @@ if (isset($_POST['delete']))
             {
                 echo '<script type = "text/javascript">
                             alert("You Cannot Delete this");
-                        window.location = "add_modules.php";
+                        window.location = history.back();
                      </script>
                     ';;
             }
