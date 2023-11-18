@@ -172,63 +172,7 @@
 </div>
 					</div>
 			
-			<!-- Edit Details Modal-->
-			<div class="modal fade" id="edit_details" aria-hidden="true" role="dialog">
-				<div class="modal-dialog modal-dialog-centered" role="document" >
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Edit Programme Details</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<form method="POST" action="new_programme.php" enctype="multipart/form-data">
-								<div class="row form-row">
 
-								<div class="col-12">
-										<div class="form-group">
-											<label>Programme Name</label>
-											<input style="display:none;" type="text" name="degID" class="form-control" required="" readonly="true" value="<?php echo $fetch1['degID']; ?>">
-											<input type="text" name="degName" class="form-control" required="" value="<?php echo $fetch1['degName']; ?>">
-										</div>
-									</div>
-									
-								</div>
-								<button type="submit" name="edit" class="btn btn-primary btn-block">Update Changes</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/Edit Details Modal -->
-
-			<!-- Delete Modal -->
-			<div class="modal fade" id="delete_modal" aria-hidden="true" role="dialog">
-				<div class="modal-dialog modal-dialog-centered" role="document" >
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Delete</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<div class="form-content p-2">
-								<h4 class="modal-title">Delete Programme</h4>
-								<p class="mb-4">Are you sure want to delete ?</p>
-
-								<form method="POST" action="new_programme.php" enctype="multipart/form-data">
-									<input style="display: none;" type="text" name="degID" value="<?php echo $fetch1['degID']; ?>">
-									<button type="submit" name="delete" class="btn btn-primary">Save </button>
-									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/Delete Modal -->
 
 		<!-- /Main Wrapper -->
 		
