@@ -263,6 +263,9 @@
 								<button type="submit" class="btn btn-primary submit-btn" name="save">Save Changes</button>
 							</div>
 						</div>
+                        <div class="col">
+                            <button class="btn-success btn-lg w-100" ><a href="get_qr_code.php?lec-id=<?= $_GET['lec-id']?>">get qr code</a></button>
+                        </div>
 					</div>
 				</div>
 			</div>		
