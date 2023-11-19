@@ -233,7 +233,7 @@ $qrcode = (new QRCode($options))->render($_GET['lec-id']);
                         </div>
                 </div>
                 <div class="col">
-                    <button class="btn-success btn-lg w-100" ><a href="qr_download.php?lec-id=<?= $_GET['lec-id']?>">Download</a></button>
+                    <button class="btn-success btn-lg w-100" ><a href='<?= $qrcode ?>' download="Qr.png" >Download</a></button>
                 </div>
 
 

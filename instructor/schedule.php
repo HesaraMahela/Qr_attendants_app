@@ -264,7 +264,7 @@
 							</div>
 						</div>
                         <div class="col">
-                            <button class="btn-success btn-lg w-100" ><a href="get_qr_code.php?lec-id=<?= $_GET['lec-id']?>">get qr code</a></button>
+                            <button class="btn-success btn-lg w-100" ><a href="get_qr_code.php?lec-id=10>">get qr code</a></button>
                         </div>
 					</div>
 				</div>
